@@ -19,7 +19,7 @@ const app = express();
 require('./config')(app);
 
 const capitalized = require('./utils/capitalized');
-const projectName = 'karaoke-party';
+const projectName = 'ironbeers';
 
 app.locals.appTitle = `${capitalized(projectName)}`;
 
