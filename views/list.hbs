@@ -1,0 +1,29 @@
+<h1 class='display-1 mb-1'>Karaoke list</h1>
+<hr class='bg-primary mb-4' />
+
+<h3 class='mb-5'>On stage:</h3>
+
+{{#each requests}}
+  {{#if @first}}
+    <div class='card mb-3 bg-info'>
+
+      <div class='display-1 row card-body'>
+        <p>Singer(s): <b>{{singers}}</b></p>
+        <p>Song: <b>{{song}}</b></p>
+        <a class='text-center text-danger' href='/delete/{{_id}}'>X</a>
+      </div>
+    </div>
+    <hr class='mb-4' />
+    <h3 class='mb-2'>Next up:</h3>
+  {{else}}
+    <div class='card mb-3'>
+
+      <div class='display-1 row card-body'>
+        <p>Singer(s): <b>{{singers}}</b></p>
+        <p>Song: <b>{{song}}</b></p>
+        <a class='text-center text-danger' href='/delete/{{_id}}'>X</a>
+      </div>
+    </div>
+
+  {{/if}}
+{{/each}}
