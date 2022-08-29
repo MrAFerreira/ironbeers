@@ -5,9 +5,10 @@ const requestSchema = new Schema({
     type: String,
     required: [true, 'Please input a singer or more'],
   },
-  amount: {
-    type: Number,
-    required: [true, 'Please input a number'],
+  type: {
+    type: String,
+    required: [true, 'Please choose a type'],
+    enum: ['beer', 'cider'],
   },
 });
 

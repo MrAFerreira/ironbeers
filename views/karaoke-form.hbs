@@ -26,17 +26,12 @@
       <div id='nameHelp' class='form-text'>Enter your name</div>
     </div>
     <div class='mb-3'>
-      <label for='amount' class='form-label'>Amount</label>
-      <input
-        type='number'
-        class='form-control'
-        id='amount'
-        aria-describedby='amountHelp'
-        name='amount'
-        placeholder='ex: 3'
-        min='0'
-      />
-      <div id='amountHelp' class='form-text'>Enter the desired amount</div>
+      <label for='type' class='form-label'>Type</label>
+      <select name='type' id='type' class='form-control'>
+        <option selected='selected' value='beer'>Beer</option>
+        <option value='cider'>Cider</option>
+      </select>
+      <div id='amountHelp' class='form-text'>Select the type of beverage</div>
     </div>
     <button type='submit' class='btn btn-success'>Submit</button>
   </form>

@@ -8,14 +8,14 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/request', (req, res, next) => {
-  const { name, amount } = req.body;
+  const { name, type } = req.body;
 
-  if (!name || !amount) {
+  if (!name || !type) {
     res.render('karaoke-form', { errorMessage: 'Please fill both fields' });
     return;
   }
 
-  Request.create({ name, amount }).then((request) => res.render('submitted', request));
+  Request.create({ name, type }).then((request) => res.render('submitted', request));
 });
 
 router.get('/list', isLoggedIn, (req, res, next) => {
